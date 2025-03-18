@@ -36,12 +36,12 @@ The dataset (`movie_ratings_data.csv`) contains the following columns:
 3. **Calculate Proportions:** Computed the percentage of binge-watchers per age group.
 
 #### **Output:**
-```
-AgeGroup,Binge Watchers,Total Users,Percentage
-Senior,20,37,54.05
-Adult,13,27,48.15
-Teen,15,36,41.67
-```
+| AgeGroup | Binge Watchers | Total Users | Percentage |
+|----------|--------------|------------|-------------|
+| Senior   | 20           | 37         | 54.05%       |
+| Adult    | 13           | 27         | 48.15%       |
+| Teen     | 15           | 36         | 41.67%       |
+
 #### **Run the Task:**
 ```bash
 spark-submit task1_binge_watching_patterns.py
@@ -56,12 +56,11 @@ spark-submit task1_binge_watching_patterns.py
 2. **Count At-Risk Users:** Computed the total number of such users.
 3. **Formatted Output:** Matched the required format with a description column.
 
-#### **Expected Output:**
-```
-Churn Risk Users,Total Users
-Users with low watch time & canceled subscriptions,14
+#### **Output:**
+| Churn Risk Users                                    | Total Users |
+|----------------------------------------------------|------------|
+| Users with low watch time & canceled subscriptions | 14        |
 
-```
 #### **Run the Task:**
 ```bash
 spark-submit task2_churn_risk_users.py
@@ -75,17 +74,16 @@ spark-submit task2_churn_risk_users.py
 1. **Group by Watched Year:** Counted the number of movies watched per year.
 2. **Analyze Trends:** Ordered the results by `WatchedYear`.
 
-#### **Expected Output:**
-```
-WatchedYear,Movies Watched
-2018,17
-2019,12
-2020,13
-2021,17
-2022,18
-2023,23
+#### **Output:**
+| WatchedYear | Movies Watched |
+|------------|----------------|
+| 2018       | 17             |
+| 2019       | 12             |
+| 2020       | 13             |
+| 2021       | 17             |
+| 2022       | 18             |
+| 2023       | 23             |
 
-```
 #### **Run the Task:**
 ```bash
 spark-submit task3_movie_watching_trends.py
@@ -128,10 +126,15 @@ cat outputs/churn_risk_users.csv
 cat outputs/movie_watching_trends.csv
 ```
 
-## **Final Notes**
-✔️ Ensure **Spark is running** before executing scripts.
-✔️ **Dataset must contain at least 100 records** for meaningful analysis.
-✔️ **Results match the expected format and are stored in `outputs/`.**
+## **Conclusion**
+- The analysis provided insights into **which age groups binge-watch the most**, helping streaming platforms optimize content recommendations.
+- The identification of **churn-risk users** can assist in targeted retention strategies.
+- **Trend analysis** helped highlight peak movie-watching years, useful for understanding industry shifts.
+
+## **Challenges Faced**
+1. **Data Cleaning:** Some inconsistencies in the dataset required preprocessing before analysis.
+2. **Performance Optimization:** Running Spark on large datasets required efficient filtering and aggregation.
+3. **Formatting Outputs:** Ensuring correct structuring and readability of output tables in CSV files.
 
 This completes the **Spark Structured API: Movie Ratings Analysis** project. 🚀
 
