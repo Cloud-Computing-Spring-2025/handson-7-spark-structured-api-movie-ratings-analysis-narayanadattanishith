@@ -59,7 +59,8 @@ spark-submit task1_binge_watching_patterns.py
 #### **Expected Output:**
 ```
 Churn Risk Users,Total Users
-Users with low watch time & canceled subscriptions,350
+Users with low watch time & canceled subscriptions,14
+
 ```
 #### **Run the Task:**
 ```bash
@@ -77,10 +78,13 @@ spark-submit task2_churn_risk_users.py
 #### **Expected Output:**
 ```
 WatchedYear,Movies Watched
-2020,1200
-2021,1500
-2022,2100
-2023,2800
+2018,17
+2019,12
+2020,13
+2021,17
+2022,18
+2023,23
+
 ```
 #### **Run the Task:**
 ```bash
